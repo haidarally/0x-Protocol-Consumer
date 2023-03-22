@@ -1,0 +1,118 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    input {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      &:focus {
+        outline: none;
+        border-color: #0074d9;
+      }
+    }
+  }
+  button[type="submit"] {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #005ea1;
+    }
+  }
+}
+
+/* Define variables */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+/* Define global styles */
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* Define styles for the rebase form */
+.rebase-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
+  &__input {
+    margin-bottom: 1rem;
+    width: 30%;
+    padding: 0.5rem;
+    border: 1px solid $secondary-color;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+  }
+
+  &__button {
+    padding: 0.5rem 1rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+/* Define styles for the epoch */
+.epoch {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: $secondary-color;
+}
+
+// Define styles for the container that holds the components
+.App {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 24px;
+  background-color: rgb(255, 255, 255); // Use Material-UI color variables
+}
+
+// Define styles for the individual components
+.component {
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  background-color: rgb(165, 152, 152);
+  max-width: 400px;
+  width: 100%;
+}
+
+// Apply the styles to the components
+.Component1 {
+  @extend .component;
+}
+
+.Component2 {
+  @extend .component;
+}
