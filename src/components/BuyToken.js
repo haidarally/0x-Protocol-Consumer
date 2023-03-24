@@ -106,6 +106,7 @@ const BuyToken = () => {
         .fillLimitOrder(order, signature, new BigNumber(order.takerAmount))
         .callAsync({
           from: "0xdb015fdbb742e9872bf9a319286e2b9bc4dc510e",
+          value: order.takerAmount,
           ...TX_DEFAULTS,
         });
 
@@ -133,11 +134,11 @@ const BuyToken = () => {
   };
 
   return (
-    <div className="rebase-form">
+    <div className="buy-form">
       <ul>
         {orderList.map((order) => {
           return (
-            <li onClick={() => selectedOrderHandler(order)}>
+            <li onClick={() => selectedOrderHandler(order)} className={selected ? 'selected' : ''}>
               Maker Token: {order.order.makerToken}, Taker Token:
               {order.order.takerToken}, Maker Amount: {order.order.makerAmount},
               Price :{order.order.takerAmount}

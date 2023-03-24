@@ -116,3 +116,44 @@ body {
 .Component2 {
   @extend .component;
 }
+
+.buy-form {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+  }
+
+  li {
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  li:hover {
+    background-color: #f2f2f2;
+  }
+
+
+
+  button {
+    background-color: #025bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

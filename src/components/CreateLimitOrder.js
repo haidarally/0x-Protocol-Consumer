@@ -53,7 +53,7 @@ const CreateLimitOrder = () => {
     // };
 
     const getFutureExpiryInSeconds = () =>
-      Math.floor(Date.now() / 1000 + 300).toString(); // 5 min expiry
+      Math.floor(Date.now() / 1000 + ( 300)).toString(); // 5 min expiry
     //   {
     //     makerToken: makerToken,
     //     takerToken: takerToken,
@@ -169,7 +169,7 @@ const CreateLimitOrder = () => {
         />
       </label>
       <label>
-        Expiration time:
+        Expiration time in seconds:
         <input
           type="text"
           value={expirationTime}

@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <CreateLimitOrder className="Component1" />
       <Rebasing className="Component2" />
-      <BuyToken />
+      <BuyToken className="Component1" />
     </div>
   );
 }
